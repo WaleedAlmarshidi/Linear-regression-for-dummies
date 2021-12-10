@@ -1,0 +1,62 @@
+<LogsLabel@Label>
+    size_hint_y: None
+    height: self.texture_size[1]
+    text_size: self.width, None
+    markup: True
+    # canvas.before:
+    #     Color:
+    #         rgba: 0, 1, 0, 1
+    #     Rectangle:
+    #         # self here refers to the widget i.e BoxLayout
+    #         pos: self.pos
+    #         size: self.size
+
+<Graph@FigureCanvasKivyAgg>
+    minimum_height: 1300
+    
+<InstructionPage>
+    Label:
+        text : 'HIIII'
+
+<MainPage>
+    GridLayout:
+        cols: 3
+        size : root.width, root.height
+        ScrollView:            
+            scroll_y: 0.15
+            GridLayout:
+                id: ModelBuildingSection
+                cols:1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: 100
+
+
+        ScrollView:
+            scroll_y: 0.15
+            spacing: 200
+            GridLayout:
+                id: ModelFilteringSection
+                cols:1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: 350
+
+
+        ScrollView:
+            scroll_y: 0.15
+            spacing: 0
+            GridLayout:
+                id: ErrorTestsSection
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: 450
+                # row_force_default=True
+                # canvas.before:
+                #     Color:
+                #         rgba: 0, 1, 0, 1
+                #     Rectangle:
+                #         # self here refers to the widget i.e BoxLayout
+                #         pos: self.pos
+                #         size: self.size
